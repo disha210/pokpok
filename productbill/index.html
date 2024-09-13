@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product bill</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <div class="h3"> Best of Combos ( Upto 20% OFF) </div>
+    <section>
+        <div class="container  item">
+            <div class="row align-itme-start">
+                <div class="col-12 col-lg-6 p-2">
+                    <div class="d-flex  align-item-center">
+                        <div class="item-1">
+                            <div>
+                                <img src="image/1.jpeg" alt="" class="img1">
+                            </div>
+
+                            <div class="item-content p-4">
+                                <div class="top-info">
+                                    <h3 class="d-flex justify-content-between align-item-center">
+                                        Fultu Kamina - Veg
+                                        <img src="image/veg.svg" alt="veg">
+                                    </h3>
+
+
+                                    <p>Save Rs. 122 | 2 Whopper Jr Veg + 2 Med Fries + 2 Coca Cola Medium</p>
+                                </div>
+                            </div>
+                            <div class="bottom-info d-flex justify-content-between">
+                                <span>₹179/-</span>
+                                <button value="179" id="btn" onclick="f1(this.value)">ADD +</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="item-1">
+                        <div>
+                            <img src="image/3.jpeg" alt="" class="img1">
+                        </div>
+
+                        <div class="item-content p-4">
+                            <div class="top-info">
+                                <h3 class="d-flex justify-content-between align-item-center">
+                                    Fultu Kamina - Non Veg
+                                    <img src="image/veg.svg" alt="veg">
+                                </h3>
+                            </div>
+                            <p>Save Rs. 122 | 2 Whopper Jr Chicken + 2 Med Fries + 2 Coca Cola Medium</p>
+                        </div>
+                        <div class="bottom-info d-flex justify-content-between">
+                            <span>₹199/-</span>
+                            <button value="199" id="btn" onclick="f1(this.value)">ADD +</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="item-1">
+                    <div class="heading p-2">
+                        <h3 class="text-center">Billing</h3>
+                    </div>
+                    <div class="add-item p-4">
+                        <div class="d-flex my-4"><span>Items :</span><span class="ms-2" id="add"></span></div>
+                        <div class="d-flex my-4"><span>Total :</span><span class="ms-2" id="total"></span></div>
+                        <div class="d-flex my-4"><span>Discount (10%) :</span><span class="ms-2" id="discount"></span>
+                        </div>
+                        <div class="d-flex my-4"><span>GST (60%) :</span><span class="ms-2" id="gst"></span></div>
+                        <div class="d-flex my-4"><span>Net price :</span><span class="ms-2" id="netprice"></span></div>
+                        <div class="my-5 payment"><span>Payment Amount :</span><span
+                                class="ms-2 my-2 text-decoration-none" id="Payment"></span></div>
+
+
+                    </div>
+                </div> -->
+                <div class="col-12 col-lg-6 p-2">
+                    <div class="d-flex  align-item-center">
+                        <div class="item-1">
+                            <div>
+                                <img src="image/1.jpeg" alt="" class="img1">
+                            </div>
+
+                            <div class="item-content p-4">
+                                <div class="top-info">
+                                    <h3 class="d-flex justify-content-between align-item-center">
+                                        Fultu Kamina - Veg
+                                        <img src="image/veg.svg" alt="veg">
+                                    </h3>
+
+
+                                    <p>Save Rs. 122 | 2 Whopper Jr Veg + 2 Med Fries + 2 Coca Cola Medium</p>
+                                </div>
+                            </div>
+                            <div class="bottom-info d-flex justify-content-between">
+                                <span>₹179/-</span>
+                                <button value="179" id="btn" onclick="f1(this.value)">ADD +</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 p-2">
+                    <div class="d-flex ">
+                        <div class="item-1">
+                            <div class="heading p-2">
+                                <h3 class="text-center">Billing</h3>
+                            </div>
+                            <div class="add-item p-4">
+                                <div class="d-flex my-4"><span>Items :</span><span class="ms-2" id="add"></span></div>
+                                <div class="d-flex my-4"><span>Total :</span><span class="ms-2" id="total"></span></div>
+                                <div class="d-flex my-4"><span>Discount (10%) :</span><span class="ms-2"
+                                        id="discount"></span>
+                                </div>
+                                <div class="d-flex my-4"><span>GST (60%) :</span><span class="ms-2" id="gst"></span>
+                                </div>
+                                <div class="d-flex my-4"><span>Net price :</span><span class="ms-2"
+                                        id="netprice"></span></div>
+                                <div class="my-5 payment"><span>Payment Amount :</span><span
+                                        class="ms-2 my-2 text-decoration-none" id="Payment"></span></div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        var total = 0;
+        cnt = 0;
+
+        function f1(no) {
+            cnt++;
+            total += parseInt(no);
+
+            document.getElementById('add').innerHTML = cnt;
+            document.getElementById('total').innerHTML = total;
+
+            var di = (total * 10) / 100;
+            document.getElementById('discount').innerHTML = dis;
+
+            ner = total - dis + gst;
+            document.getElementById('Netprice').innerHTML = net;
+            document.getElementById('payment').innerHTML = net;
+
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>

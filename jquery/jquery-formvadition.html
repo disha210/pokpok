@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jquery form-validation</title>
+	<style>
+		.error{
+			display: none;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<form id="frm">
+
+		<div>
+			<input type="text" id="txt" placeholder="enter Name">
+			<span class="error">Please Enter name..</span>
+		</div>
+
+		<div>
+			<input type="email" id="email" placeholder="Enter Email">
+			<span class="error">Please Enter Email..</span>
+		</div>
+
+		<div>
+			<input type="password" id="ps" placeholder="Enter Password">
+			<span class="error">Please Enter Password..</span>
+		</div>
+		<div class="gender">
+			<input type="radio" name="gen">Male
+			<input type="radio" name="gen"> Female
+			<span class="error">Please Select Gender...</span>
+		</div>
+
+		<div>
+			<input type="submit" >
+		</div>
+
+	</form>
+
+
+	<script src="jquery-3.7.1.min.js"></script>
+	<script>
+		
+		$(document).ready(function(){
+			$('#frm').submit(function(){
+				var name = $('#txt').val()
+				var email = $('#email').val()
+				var password = $('#ps').val()
+                var gen = $('[name="gen"]:checked').length;
+				//alert(gen)
+
+				
+				if(name == ''){
+					//alert('please enter name')
+					//$('#txt')
+					$('#txt').next('.error').css('display','inline')
+					return false
+				}
+				if(email == ''){
+					//alert('please enter name')
+					//$('#txt')
+					$('#email').next('.error').css('display','inline')
+					return false
+				}
+				if(password == ''){
+					//alert('please enter name')
+					//$('#txt')
+					$('#ps').next('.error').css('display','inline')
+					return false
+				}
+				
+				if(gen == 0){
+					$('.gender').find('.error').css('display','inline')
+				}
+				//alert()
+			})
+
+				$('#txt').keyup(function (){
+					$(this).next('.error').css('display','none')
+				})
+
+				$('#email').keyup(function (){
+					$(this).next('.error').css('display','none')
+				})
+
+				$('#ps').keyup(function (){
+					$(this).next('.error').css('display','none')
+				})
+
+				$('[name="gen"]').click(function(){
+					$(this).siblings('.error').css('display','none')
+				})
+
+		})
+
+		
+	</script>
+
+
+</body>
+</html>

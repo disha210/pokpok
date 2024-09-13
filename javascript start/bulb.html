@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		bulb
+	</title>
+</head>
+<body>
+	<img src="img/off.webp" id="view">
+	<button onclick="on()">ON</button>
+	<button onclick="off()">OFF</button>
+	<script type="text/javascript">
+		
+
+		function on()
+		{
+			document.getElementById('view').src="img/on.webp"
+		}
+
+
+		function off()
+		{
+			document.getElementById('view').src="img/off.webp"
+		}
+	</script>
+
+</body>
+</html>
